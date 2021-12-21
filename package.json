@@ -1,0 +1,26 @@
+{
+  "name": "Shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "mongoose": "^6.1.2"
+  },
+  "devDependencies": {
+    "node": "^16.13.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huyentran1112/Shop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/huyentran1112/Shop/issues"
+  },
+  "homepage": "https://github.com/huyentran1112/Shop#readme"
+}
