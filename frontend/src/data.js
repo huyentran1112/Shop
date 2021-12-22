@@ -46,7 +46,7 @@ const data = {
       description: ""
     },
     {
-      _id: '1',
+      _id: '6',
       name: "Rocky Road",
       image: './images/c6.png',
       price: 60,
