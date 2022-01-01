@@ -20,7 +20,8 @@
     "nodemon": "^2.0.15"
   },
   "scripts": {
-    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
+    "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js",
+    "build": "cd frontend && npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -33,5 +34,6 @@
     "url": "https://github.com/huyentran1112/Shop/issues"
   },
   "homepage": "https://github.com/huyentran1112/Shop#readme",
-  "description": ""
+  "description": "",
+  "engines": {"node": "12.4.0", "npm": "6.9.0"}
 }
