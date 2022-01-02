@@ -34,7 +34,7 @@
   "homepage": "https://github.com/huyentran1112/Shop#readme",
   "description": "",
   "engines": {
-    "node": "12.4.0",
+    "node": "16.13.1",
     "npm": "6.9.0"
   }
 }
