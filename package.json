@@ -14,7 +14,7 @@
     "web-vitals": "^2.1.2"
   },
   "devDependencies": {
-    "node": "^16.13.1",
+    "node": "14.6.0",
     "nodemon": "^2.0.15"
   },
   "scripts": {
@@ -34,7 +34,7 @@
   "homepage": "https://github.com/huyentran1112/Shop#readme",
   "description": "",
   "engines": {
-    "node": "16.13.1",
+    "node": "14.6.0",
     "npm": "6.9.0"
   }
 }
