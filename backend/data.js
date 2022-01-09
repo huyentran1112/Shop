@@ -1,7 +1,7 @@
 
 const data = {
   products: [
-    {
+ /*    {
       name: "Yema Caramel Cake",
       image: './images/c1.png',
       price: 60,
@@ -40,7 +40,7 @@ const data = {
       ratings: 4,
       numReviews: 2,
       description: ""
-    },
+    }, */
     {
       name: "Rocky Road",
       image: './images/c6.png',

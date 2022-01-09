@@ -42,8 +42,10 @@ h1 {
   padding: 1rem 0;
 }
 h2 {
-  font-size: 1.6rem;
-  padding: 1rem 0;
+  font-size: 2.6rem;
+  padding: 0rem 0;
+  margin: 0;
+  text-align: center;
 }
 
 a {
@@ -159,19 +161,30 @@ a.brand {
 }
 
 img {
-  border-radius: 0.5rem;
+  border-radius: 0.2rem;
+  padding: 0;
 }
 img.small {
   max-width: 5rem;
   width:100%;
 }
 img.medium {
-  max-width: 29rem;
+  max-width: 60rem;
   width: 100%;
+  padding: 0;
 }
 img.large {
   width: 100%;
 }
 .min-30 {
   min-width: 30rem;
+}
+.price {
+  text-align: center;
+}
+.primary {
+  background-color: #f0c040;
+}
+.block {
+  width: 100%;
 }
