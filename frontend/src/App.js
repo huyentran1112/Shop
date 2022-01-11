@@ -5,11 +5,16 @@ import CartScreen from './screens/CartScreen';
 import HomeScreen from './screens/HomeScreen';
 import ProductScreen from './screens/ProductScreen';
 
+// creates the App component for the homepate
 function App() {
+  // Use selector gets the state that can be used as a prop
   const cart = useSelector((state) => state.cart);
+  // deconstruction of cart as cart items
   const { cartItems } = cart;
 
   return (
+    //browser router enables the link/route component to use go to a specified url
+    //route path determines the name of the screen to display and the corresponding url 
     <BrowserRouter>
       <div className="grid-container">
         <header className="row">

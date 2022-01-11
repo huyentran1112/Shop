@@ -1,7 +1,9 @@
 import Axios from 'axios';
 import { PRODUCT_LIST_REQUEST, PRODUCT_LIST_SUCCESS, PRODUCT_LIST_FAIL, PRODUCT_DETAILS_REQUEST, PRODUCT_DETAILS_SUCCESS, PRODUCT_DETAILS_FAIL } from "../constants/productConstants";
 
+
 export const listProducts = () => async (dispatch) => {
+    // dispatch triggers state change, and gets all products ased on the data provided by the api route
   dispatch ({
     type: PRODUCT_LIST_REQUEST
   });
@@ -9,14 +11,18 @@ export const listProducts = () => async (dispatch) => {
       const {data} = await Axios.get('/api/products');
       dispatch({type: PRODUCT_LIST_SUCCESS, payload: data})
   } catch(error) {
+    // error handling in case of error
     dispatch({type: PRODUCT_LIST_FAIL, payload: error.message})
   }
-};
+}
+
 export const detailsProduct = (productId) => async(dispatch) => {
+    // dispatch triggers state change, and gets the product details based on the id provided 
 dispatch({ type: PRODUCT_DETAILS_REQUEST, payload: productId});
 try {
   const { data } = await Axios.get(`/api/products/${productId}`);
   dispatch({type: PRODUCT_DETAILS_SUCCESS, payload: data}); 
+  //error handling
 } catch (error) {
   dispatch({
     type: PRODUCT_DETAILS_FAIL,

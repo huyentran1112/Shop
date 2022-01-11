@@ -5,19 +5,29 @@ import { detailsProduct } from '../actions/productActions';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
 
+// creates the Product Screen Component
 export default function ProductScreen(props) {
+  // initiates the useDispatch method which references the dispatch function from the Redux store
   const dispatch = useDispatch();
+  // gets the id of the product based from the props.match.params object property
   const productId = props.match.params.id;
+  // sets state of current quantity to 1
   const [qty, setQty] = useState(1);
+  // gets the product details based from the current state
   const productDetails = useSelector((state) => state.productDetails);
+  // deconstruction of productdetails into status
   const { loading, error, product } = productDetails;
-
+  // useEffect changes the productID to dispatch based on a dispatch action and product id
   useEffect(() => {
     dispatch(detailsProduct(productId));
   }, [dispatch, productId]);
+
+  // adds qty to the props when the function executes
   const addToCartHandler = () => {
+    // changes route and passes the qty prop to  the cart screen component
     props.history.push(`/cart/${productId}?qty=${qty}`);
   };
+
   return (
     <div>
       {loading ? (

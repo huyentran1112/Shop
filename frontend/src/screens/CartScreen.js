@@ -4,27 +4,36 @@ import { Link } from 'react-router-dom';
 import { addToCart, removeFromCart } from '../actions/cartActions';
 import MessageBox from '../components/MessageBox';
 
+// creates the Home Screen Component
 export default function CartScreen(props) {
+  // gets the ids of the products added based from the props.match.params object property
   const productId = props.match.params.id;
+  // gets the qty based from the props.location.search object property
   const qty = props.location.search
     ? Number(props.location.search.split('=')[1])
     : 1;
+  // gets the cart based from the current state / store
   const cart = useSelector((state) => state.cart);
+  // deconstructs the cart items in cart
   const { cartItems } = cart;
+  // creates a dispatch function
   const dispatch = useDispatch();
+  // useEffect changes the productID to dispatch(add to cart) based on a dispatch action and product id
   useEffect(() => {
     if (productId) {
       dispatch(addToCart(productId, qty));
     }
   }, [dispatch, productId, qty]);
 
+  // if the remove from cart is called, it will initiate dispatch action: removefromcart
   const removeFromCartHandler = (id) => {
     dispatch(removeFromCart(id));
   };
-
+  // changes the url route to checkout page
   const checkoutHandler = () => {
     props.history.push('/signin?redirect=shipping');
   };
+
   return (
     <div className="row top">
       <div className="col-2">

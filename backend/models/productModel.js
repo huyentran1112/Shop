@@ -1,5 +1,6 @@
 import mongoose from 'mongoose';
 
+// creates a schema for the product, timestamp is needed to determine date it was added
 const productSchema = new mongoose.Schema(
   {
     name: { type: String, required: true, unique: true },
@@ -16,6 +17,8 @@ const productSchema = new mongoose.Schema(
     timestamps: true,
   }
 );
+
+// creates an instance of the product schema and names it Product
 const Product = mongoose.model('Product', productSchema);
 
 export default Product;
